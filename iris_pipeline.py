@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.tree import DecisionTreeClassifier  # <-- Added missing import
+from sklearn.tree import DecisionTreeClassifier 
 
 # Step 1 Loading the dataset
 
@@ -54,7 +54,7 @@ y_pred_log = log_reg.predict(X_test_scaled)
 print('--- Logistic Regression Performance ---')
 print(classification_report(y_test, y_pred_log))
 
-# Step 5: Train and evaluate Decision Tree (Added so tree_clf and y_pred_tree exist)
+# Step 5: Train and evaluate Decision Tree
 tree_clf = DecisionTreeClassifier(random_state=42)
 tree_clf.fit(X_train, y_train)
 
